@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "EasyCalendar"
 include(":app")
- 
+include(":datasource")
