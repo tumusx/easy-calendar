@@ -1,5 +1,6 @@
 package com.github.tumusx.easycalendaralarm
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -8,9 +9,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.github.tumusx.easycalendaralarm.ui.components.CardAlarmComponent
+import com.github.tumusx.easycalendaralarm.ui.components.ListComponent
 import com.github.tumusx.easycalendaralarm.ui.theme.EasyCalendarAlarmTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     Surface(
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        CardAlarmComponent(colorBackground = Color.Blue)
+                        ListComponent()
                     }
                 }
             }
@@ -31,10 +31,11 @@ class MainActivity : ComponentActivity() {
 }
 
 
+@SuppressLint("CoroutineCreationDuringComposition")
 @Preview(showBackground = true)
 @Composable
 fun EasyAlarmFirstScreenListPreview() {
     EasyCalendarAlarmTheme {
-        CardAlarmComponent(colorBackground = Color.Blue)
+        ListComponent()
     }
 }
