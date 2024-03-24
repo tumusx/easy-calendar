@@ -13,11 +13,11 @@ import androidx.compose.ui.unit.dp
 fun ListComponent() {
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        items(listOf("Item 1", "Item 2", "Item 3")) {
+        items(listOf("Item 1", "Item 2", "Item 3")) { item ->
             CardAlarmComponent(colorBackground = Color.Blue) {
-                Log.d("ClickItem", "Click item")
+                Log.d("ClickItem", item)
             }
         }
     }

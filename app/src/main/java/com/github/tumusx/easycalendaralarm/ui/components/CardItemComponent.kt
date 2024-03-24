@@ -1,6 +1,5 @@
 package com.github.tumusx.easycalendaralarm.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -26,10 +25,9 @@ fun CardAlarmComponent(
     onClickAction: () -> Unit
 ) {
     Card(
-        onClick = {onClickAction()},
+        onClick = { onClickAction() },
         modifier = modifier
-            .padding(10.dp)
-            .background(Color.White),
+            .padding(top = 5.dp),
         colors = CardDefaults.cardColors(containerColor = colorBackground)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
