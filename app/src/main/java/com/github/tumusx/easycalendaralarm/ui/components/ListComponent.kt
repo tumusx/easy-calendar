@@ -1,6 +1,5 @@
 package com.github.tumusx.easycalendaralarm.ui.components
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyColumn
@@ -15,10 +14,8 @@ fun ListComponent() {
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        items(listOf("Item 1", "Item 2", "Item 3")) { item ->
-            CardAlarmComponent(colorBackground = Color.Blue) {
-                Log.d("ClickItem", item)
-            }
+        items(listOf("Item 1", "Item 2", "Item 3")) {
+            CardAlarmComponent(colorBackground = Color.Blue)
         }
     }
 }
