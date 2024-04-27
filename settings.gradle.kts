@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "EasyCalendarAlarm"
 include(":app")
- 
+include(":core")
+include(":google_login")
